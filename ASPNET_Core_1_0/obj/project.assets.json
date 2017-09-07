@@ -13115,7 +13115,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RasterDeluge\\.nuget\\packages\\": {},
+    "C:\\Users\\Justin.Mathis\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13124,17 +13124,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\RasterDeluge\\Source\\Repos\\Matter\\ASPNET_Core_1_0\\MatterCentral.csproj",
+      "projectUniqueName": "C:\\Users\\Justin.Mathis\\Documents\\Projects\\Matter\\ASPNET_Core_1_0\\MatterCentral.csproj",
       "projectName": "MatterCentral",
-      "projectPath": "C:\\Users\\RasterDeluge\\Source\\Repos\\Matter\\ASPNET_Core_1_0\\MatterCentral.csproj",
-      "packagesPath": "C:\\Users\\RasterDeluge\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RasterDeluge\\Source\\Repos\\Matter\\ASPNET_Core_1_0\\obj\\",
+      "projectPath": "C:\\Users\\Justin.Mathis\\Documents\\Projects\\Matter\\ASPNET_Core_1_0\\MatterCentral.csproj",
+      "packagesPath": "C:\\Users\\Justin.Mathis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Justin.Mathis\\Documents\\Projects\\Matter\\ASPNET_Core_1_0\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\RasterDeluge\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Justin.Mathis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13142,7 +13142,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://www.myget.org/F/aspnet-contrib/api/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
