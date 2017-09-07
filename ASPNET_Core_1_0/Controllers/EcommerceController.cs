@@ -33,7 +33,7 @@ namespace ASPNET_Core_1_0.Controllers
         public IActionResult AuthorizationEdit(string AuthorizationNumber)
         {
             var Auth = 
-                Repository.Authorizations.Where(a => a.AuthorizationNumber == AuthorizationNumber)
+                Repository.Authorizations.Where(a => a.Number == AuthorizationNumber)
                                          .First();
             return View(Auth);
         }
@@ -43,6 +43,7 @@ namespace ASPNET_Core_1_0.Controllers
         {
             return View(Auth);
         }
+
         [HttpGet]
         public ActionResult AddNewRow()
         {

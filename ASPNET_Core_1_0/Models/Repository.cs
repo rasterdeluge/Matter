@@ -14,11 +14,11 @@ namespace ASPNET_Core_1_0.Models
 
         static Repository()
         {
-            Authorizations.Add(new Authorization(1, "Shipper1", "Receiver1", "ReceiverContact1", "Alabama", "Tucson", "999", "9991", "SupplierName1", "ReclocID1", "ReclocName1"));
-            Authorizations.Add(new Authorization(2, "Shipper1", "Receiver1", "ReceiverContact1", "Alabama", "Tucson", "999", "9991", "SupplierName1", "ReclocID1", "ReclocName1"));
-            Authorizations.Add(new Authorization(3, "Shipper1", "Receiver1", "ReceiverContact1", "Alabama", "Tucson", "999", "9991", "SupplierName1", "ReclocID1", "ReclocName1"));
-            Authorizations.Add(new Authorization(4, "Shipper1", "Receiver1", "ReceiverContact1", "Alabama", "Tucson", "999", "9991", "SupplierName1", "ReclocID1", "ReclocName1"));
-            Authorizations.Add(new Authorization(5, "Shipper1", "Receiver1", "ReceiverContact1", "Alabama", "Tucson", "999", "9991", "SupplierName1", "ReclocID1", "ReclocName1"));
+            //Authorizations.Add(new Authorization(1, "1212121", "Shipper1", "Receiver1", "ReceiverContact1", "Alabama", "Tucson", "999", "9991", "SupplierName1", "ReclocID1", "ReclocName1"));
+            //Authorizations.Add(new Authorization(2, "1212121", "Shipper1", "Receiver1", "ReceiverContact1", "Alabama", "Tucson", "999", "9991", "SupplierName1", "ReclocID1", "ReclocName1"));
+            //Authorizations.Add(new Authorization(3, "1212121", "Shipper1", "Receiver1", "ReceiverContact1", "Alabama", "Tucson", "999", "9991", "SupplierName1", "ReclocID1", "ReclocName1"));
+            //Authorizations.Add(new Authorization(4, "1212121", "Shipper1", "Receiver1", "ReceiverContact1", "Alabama", "Tucson", "999", "9991", "SupplierName1", "ReclocID1", "ReclocName1"));
+            //Authorizations.Add(new Authorization(5, "1212121", "Shipper1", "Receiver1", "ReceiverContact1", "Alabama", "Tucson", "999", "9991", "SupplierName1", "ReclocID1", "ReclocName1"));
         }
     }
 }

@@ -83,21 +83,19 @@
                         <tbody>
                             @foreach(Authorization item in Model){
                                 <tr>
-                                    <td>@item.AuthorizationNumber</td>
-                                    <td>@item.Shipper</td>
-                                    <td>@item.Receiver</td>
-                                    <td>@item.ReceiverContact</td>
-                                    <td>@item.State</td>
-                                    <td>@item.County</td>
-                                    <td>@item.SupplierNumber</td>
-                                    <td>@item.SupplierName</td>
-                                    <td>@item.ReclocID</td>
-                                    <td>@item.ReclocName</td>
+                                    <td>@item.Id</td>
+                                    <td>@item.Number</td>
+                                    <td>@item.ShipperId</td>
+                                    <td>@item.ReceiverId</td>
+                                    <td>@item.ReceiverContactId</td>
+                                    <td>@item.CountyId</td>
+                                    <td>@item.SupplierId</td>
+                                    <td>@item.ReceiveLocationId</td>
                                     <td class="text-right">
                                         <div class="btn-group">
                                             @*<button class="btn-white btn btn-xs">View</button>*@
                                             <button class="btn-white btn btn-xs" onclick="location.href='@Url.Action("AuthorizationEdit", "Ecommerce", 
-                                                                                                        new { AuthorizationNumber = item.AuthorizationNumber })';return false;">Edit</button>
+                                                                                                        new { AuthorizationNumber = item.Number })';return false;">Edit</button>
 </div>
                                     </td>
                                 </tr>
