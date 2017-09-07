@@ -8,12 +8,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using ASPNET_Core_1_0.Models;
-using ASPNET_Core_1_0.Models.AccountViewModels;
-using ASPNET_Core_1_0.Services;
+using MatterCentral.Models;
+using MatterCentral.Models.AccountViewModels;
+using MatterCentral.Services;
 
 
-namespace ASPNET_Core_1_0.Controllers
+namespace MatterCentral.Controllers
 {
     [Authorize]
     public class AccountController : Controller

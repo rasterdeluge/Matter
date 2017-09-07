@@ -1,0 +1,9 @@
+﻿@model MatterCentral.Models.GetStatesViewModel
+
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model.States) {
+    <option value="@item.Value">@item.Key</option>
+}

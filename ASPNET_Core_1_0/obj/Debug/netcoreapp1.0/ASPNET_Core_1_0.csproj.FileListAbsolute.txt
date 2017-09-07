@@ -1,0 +1,12 @@
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\bin\Debug\netcoreapp1.0\ASPNET_Core_1_0.deps.json
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\bin\Debug\netcoreapp1.0\ASPNET_Core_1_0.runtimeconfig.json
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\bin\Debug\netcoreapp1.0\ASPNET_Core_1_0.runtimeconfig.dev.json
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\bin\Debug\netcoreapp1.0\ASPNET_Core_1_0.dll
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\bin\Debug\netcoreapp1.0\ASPNET_Core_1_0.pdb
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\obj\Debug\netcoreapp1.0\ASPNET_Core_1_0.csprojResolveAssemblyReference.cache
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\obj\Debug\netcoreapp1.0\ASPNET_Core_1_0.csproj.CoreCompileInputs.cache
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\obj\Debug\netcoreapp1.0\UserSecretsAssemblyInfo.cs
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\obj\Debug\netcoreapp1.0\ASPNET_Core_1_0.AssemblyInfoInputs.cache
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\obj\Debug\netcoreapp1.0\ASPNET_Core_1_0.AssemblyInfo.cs
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\obj\Debug\netcoreapp1.0\ASPNET_Core_1_0.dll
+D:\matthew\RockStone Stuff\BootStrap Templates\WB0R5L90S\inspinia_v2.7.1\ASPNET_Core_1_0_Seed_Project\ASPNET_Core_1_0\obj\Debug\netcoreapp1.0\ASPNET_Core_1_0.pdb

@@ -1,0 +1,71 @@
+﻿@model MatterCentral.Models.ListAuthorizationViewModel
+
+
+@{ 
+    Layout = "_FieldItemList";
+}
+
+<table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+    <thead>
+        <tr>
+            <th data-toggle="true">Number</th>
+            <th data-toggle="true">Authorization Type</th>
+            <th data-toggle="true">Status</th>
+            <th data-toggle="true">Buyer</th>
+            <th data-toggle="true">Shipper</th>
+            <th data-toggle="true">Receiver</th>
+            <th data-toggle="true">Effective</th>
+            <th data-toggle="true">Expiration</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Authorizations) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AuthorizationType.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AuthorizationStatus.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Buyer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Shipper.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Receiver.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Effective)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Expiration)
+                </td>
+                @*<td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>*@
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button class="btn-white btn btn-xs" onclick="@Url.Action("View", "Authorization");">Details</button>
+                        <button class="btn-white btn btn-xs" onclick="@Url.Action("View", "Authorization");">Edit</button>
+                        <button class="btn-white btn btn-xs">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="6">
+                <ul class="pagination pull-right"></ul>
+            </td>
+        </tr>
+    </tfoot>
+</table>

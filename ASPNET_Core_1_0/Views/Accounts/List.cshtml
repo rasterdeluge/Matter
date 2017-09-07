@@ -1,0 +1,51 @@
+﻿@model MatterCentral.Models.ListAccountViewModel
+
+
+@{ 
+    Layout = "_FieldItemList";
+}
+
+<table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+    <thead>
+        <tr>
+            <th data-toggle="true">Id</th>
+            <th data-toggle="true">Name</th>
+            <th data-toggle="true">Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Accounts) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type.Title)
+                </td>
+                @*<td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>*@
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button class="btn-white btn btn-xs" onclick="@Url.Action("View", "Accounts");">Details</button>
+                        <button class="btn-white btn btn-xs" onclick="@Url.Action("View", "Accounts");">Edit</button>
+                        <button class="btn-white btn btn-xs">Delete</button>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="6">
+                <ul class="pagination pull-right"></ul>
+            </td>
+        </tr>
+    </tfoot>
+</table>

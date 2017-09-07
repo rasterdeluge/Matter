@@ -1,0 +1,132 @@
+﻿@model MatterCentral.Models.CreateAccountViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Account</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create"  style="width:500px;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div  class="col-lg-2" style="width:200px;">
+                <div class="form-group">
+                    <label asp-for="Account.Name" class="control-label"></label>
+                    <input asp-for="Account.Name" class="form-control" />
+                    <span asp-validation-for="Account.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Country" class="control-label"></label>
+                    <select asp-for="Country" class="form-control" id="CountrySelector" asp-items="Model.Countries"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="State" class="control-label"></label>
+                    <select id="StateSelector" name="StateId" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Account.City" class="control-label"></label>
+                    <select id="CitySelector" name="CityId" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Account.ZipCode" class="control-label"></label>
+                    <input asp-for="Account.ZipCode" class="form-control" />
+                    <span asp-validation-for="Account.ZipCode" class="text-danger"></span>
+                </div>
+            </div>
+            @*<select name="ShipperId" class="form-control">
+                @foreach (var item in Model.ShipperList) {
+                    <option value="@item.Id" selected="@(item.Id==Model.ShipperId)">@item.Value</option>
+                }
+            </select>*@
+            <div class="col-lg-2" style="width:200px;">
+                <div class="form-group">
+                    <label asp-for="Account.IsActive" class="control-label"></label>
+                    <input asp-for="Account.IsActive" class="form-control" />
+                    <span asp-validation-for="Account.IsActive" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Account.ARAccountingCode" class="control-label"></label>
+                    <input asp-for="Account.ARAccountingCode" class="form-control" />
+                    <span asp-validation-for="Account.ARAccountingCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Account.APAccountingCode" class="control-label"></label>
+                    <input asp-for="Account.APAccountingCode" class="form-control" />
+                    <span asp-validation-for="Account.APAccountingCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Account.ExternalAccountingId" class="control-label"></label>
+                    <input asp-for="Account.ExternalAccountingId" class="form-control" />
+                    <span asp-validation-for="Account.ExternalAccountingId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Account.TaxId" class="control-label"></label>
+                    <input asp-for="Account.TaxId" class="form-control" />
+                    <span asp-validation-for="Account.TaxId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Account.TypeId" class="control-label"></label>
+                    <select asp-for="Account.TypeId" class="form-control" asp-items="Model.AccountTypes"></select>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var StatesUrl = '@Url.Action("GetStates", "Accounts", new { _CountryId = "PLACEHOLDER" } )';
+            var CitiesUrl = '@Url.Action("GetCities", "Accounts", new { _StateId = "PLACEHOLDER" } )';
+            // On CountrySelector change, generate State and City lists
+            $('#CountrySelector').change(function () {
+                
+                // Get Country
+                var Country = $('#CountrySelector').val();
+
+                $.get(StatesUrl.replace('PLACEHOLDER', Country), function (data) {
+
+                    // Clear City
+                    $("#CitySelector").html("");
+
+                    // Update State
+                    $("#StateSelector").html(data);
+                });
+
+            });
+
+            // On StateSelector change, generate State and City lists
+            $('#StateSelector').change(function () {
+
+                // Get State
+                var State = $('#StateSelector').val();
+
+                $.get(CitiesUrl.replace('PLACEHOLDER', State), function (data) {
+                    
+                    // Update State
+                    $("#CitySelector").html(data);
+                });
+
+            });
+
+
+        });
+    </script>
+
+}

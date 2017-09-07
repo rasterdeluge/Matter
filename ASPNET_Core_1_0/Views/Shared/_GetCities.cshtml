@@ -1,0 +1,9 @@
+﻿@model MatterCentral.Models.GetCitiesViewModel
+
+@{
+    Layout = null;
+}
+
+@foreach (var item in Model.Cities) {
+    <option value="@item.Value">@item.Key</option>
+}

@@ -1,0 +1,12 @@
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\bin\Debug\netcoreapp2.0\ASPNET_Core_1_0.deps.json
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\bin\Debug\netcoreapp2.0\ASPNET_Core_1_0.runtimeconfig.json
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\bin\Debug\netcoreapp2.0\ASPNET_Core_1_0.runtimeconfig.dev.json
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\bin\Debug\netcoreapp2.0\ASPNET_Core_1_0.dll
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\bin\Debug\netcoreapp2.0\ASPNET_Core_1_0.pdb
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\obj\Debug\netcoreapp2.0\MatterCentral.csprojResolveAssemblyReference.cache
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\obj\Debug\netcoreapp2.0\MatterCentral.csproj.CoreCompileInputs.cache
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\obj\Debug\netcoreapp2.0\MatterCentral.AssemblyInfoInputs.cache
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\obj\Debug\netcoreapp2.0\MatterCentral.AssemblyInfo.cs
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\obj\Debug\netcoreapp2.0\ASPNET_Core_1_0.dll
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\obj\Debug\netcoreapp2.0\ASPNET_Core_1_0.pdb
+C:\Users\Justin.Mathis\Documents\Visual Studio 2017\Projects\Field Management Prototype\ASPNET_Core_1_0\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

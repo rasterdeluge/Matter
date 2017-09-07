@@ -1,0 +1,81 @@
+﻿@model MatterCentral.Models.EditAuthorizationViewModel
+
+
+    <fieldset class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Number, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Number, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Number, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="value_type">Shipper</label>
+            <div class="col-md-10">
+                <select name="ShipperId" class="form-control">
+                    @foreach (var item in Model.ShipperList) {
+                        <option value="@item.Id" selected="@(item.Id==Model.ShipperId)">@item.Value</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="value_type">Receiver</label>
+            <div class="col-md-10">
+                <select name="ReceiverId" class="form-control">
+                    @foreach (var item in Model.ReceiverList) {
+                        <option value="@item.Id" selected="@(item.Id==Model.ReceiverId)">@item.Value</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="value_type">Receiver Contact</label>
+            <div class="col-md-10">
+                <select name="ReceiverContactId" class="form-control">
+                    @foreach (var item in Model.ReceiverContactList) {
+                        <option value="@item.Id" selected="@(item.Id==Model.ReceiverContactId)">@item.Value</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="value_type">County</label>
+            <div class="col-md-10">
+                <select name="CountyId" class="form-control">
+                    @foreach (var item in Model.CountyList) {
+                        <option value="@item.Id" selected="@(item.Id==Model.CountyId)">@item.Value</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="value_type">Supplier</label>
+            <div class="col-md-10">
+                <select name="SupplierId" class="form-control">
+                    @foreach (var item in Model.SupplierList) {
+                        <option value="@item.Id" selected="@(item.Id==Model.SupplierId)">@item.Name</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="value_type">Receive Location</label>
+            <div class="col-md-10">
+                <select name="ReceiveLocationId" class="form-control">
+                    @foreach (var item in Model.ReceiveLocationList) {
+                        <option value="@item.Id" selected="@(item.Id==Model.ReceiveLocationId)">@item.Value</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+    </fieldset>

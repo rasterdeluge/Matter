@@ -1,0 +1,66 @@
+﻿@model MatterCentral.Models.Authorization
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Authorization</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AuthorizationTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AuthorizationTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buyer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buyer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShipperId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShipperId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceiverId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReceiverId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Effective)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Effective)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Expiration)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Expiration)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

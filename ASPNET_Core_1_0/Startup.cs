@@ -9,13 +9,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using ASPNET_Core_1_0.Data;
-using ASPNET_Core_1_0.Models;
-using ASPNET_Core_1_0.Services;
+using MatterCentral.Data;
+using MatterCentral.Models;
+using MatterCentral.Services;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 
-namespace ASPNET_Core_1_0
+namespace MatterCentral
 {
     public class Startup
     {
@@ -47,11 +47,11 @@ namespace ASPNET_Core_1_0
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<ALCContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddEntityFrameworkStores<ALCContext>() // Note: This line was modified, and ACLContext may not AddEntityFrameworkStores<> 
                 .AddDefaultTokenProviders();
 
             services.AddMvc();

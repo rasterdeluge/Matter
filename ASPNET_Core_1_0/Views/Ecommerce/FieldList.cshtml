@@ -1,0 +1,187 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "ProductsList";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>E-commerce product list</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="@Url.Action("Dashboard_1", "Dashboards")">Home</a>
+            </li>
+            <li>
+                <a>E-commerce</a>
+            </li>
+            <li class="active">
+                <strong>Product list</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+
+
+    <div class="ibox-content m-b-sm border-bottom">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    @*<label class="control-label" for="value_type">Type</label>*@
+                    <select id="fieldSelector" name="fieldSelector" class="form-control">
+                        @foreach (string field in Model) {
+                            <option value="@field">@field</option>
+                        }
+                        @*<option value="0" selected>Field 1</option>*@
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-content m-b-sm border-bottom">
+        <div class="row">
+            @using (Html.BeginForm("EditField", "Ecommerce", FormMethod.Post)) {
+                <div id="editFieldDiv">@*Render EditField partial view here.*@</div>
+                <input id="FieldName" type="hidden" name="country" value="SomeField">
+                <input id="btnSubmitAuth" class="btn btn-primary pull-left" type="submit" value="Submit">
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    @*Generate Tables for each field type*@
+                    <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+                        <thead>
+                            <tr>
+                                <th data-toggle="true">Field Attribute 1</th>
+                                <th data-toggle="true">Field Attribute 2</th>
+                                <th data-toggle="true">Field Attribute 3</th>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="6">
+                                    <ul class="pagination pull-right"></ul>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                                @*
+                        <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+                            <thead>
+                                <tr>
+                                    <th data-toggle="true">Authorization Number</th>
+                                    <th data-hide="all">Shipper</th>
+                                    <th data-hide="all">Receiver</th>
+                                    <th data-hide="all">Receiver Contact</th>
+                                    <th data-hide="all">State</th>
+                                    <th data-hide="all">County</th>
+                                    <th data-hide="all">Supplier Number</th>
+                                    <th data-hide="all">Supplier Name</th>
+                                    <th data-hide="all">Recloc ID</th>
+                                    <th data-hide="all">Recloc Name</th>
+                                    <th class="text-right" data-sort-ignore="true">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach(Authorization item in Model){
+                                    <tr>
+                                        <td>@item.AuthorizationNumber</td>
+                                        <td>@item.Shipper</td>
+                                        <td>@item.Receiver</td>
+                                        <td>@item.ReceiverContact</td>
+                                        <td>@item.State</td>
+                                        <td>@item.County</td>
+                                        <td>@item.SupplierNumber</td>
+                                        <td>@item.SupplierName</td>
+                                        <td>@item.ReclocID</td>
+                                        <td>@item.ReclocName</td>
+                                        <td class="text-right">
+                                            <div class="btn-group">
+                                                <button class="btn-white btn btn-xs" onclick="location.href='@Url.Action("AuthorizationEdit", "Ecommerce",
+                                                                                                            new { AuthorizationNumber = item.AuthorizationNumber })';return false;">Edit</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6">
+                                        <ul class="pagination pull-right"></ul>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                                *@
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+@section Styles {
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/footable/css/footable.core.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="~/lib/footable/css/footable.core.min.css" />
+    </environment>
+}
+
+@section Scripts {
+    <environment names="Development,Staging,Production">
+        <script src="~/lib/footable/dist/footable.all.min.js"></script>
+    </environment>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //$('.footable').footable();
+
+
+            var url = '@Url.Action("EditField", "Ecommerce", new { Field = "PLACEHOLDER" } )';
+            // On fieldSelector change, generate Edit Box
+            $('#fieldSelector').change(function () {
+
+                // Clear old form
+                $("#editFieldDiv").html("");
+
+                // Get Field Name
+                var field = $('#fieldSelector').val();
+
+                // 
+                $("#FieldName").val(field);
+                
+                $.get(url.replace('PLACEHOLDER', field), function (data) {
+                    $("#editFieldDiv").html(data);
+                });
+
+            });
+
+            // Stay on page after submitting form
+            var $form = $('form');
+            $form.submit(function () {
+                $.post($(this).attr('action'), $(this).serialize(), function (response) {
+                    // do something here on success
+                    $("#editFieldDiv").html(response);
+                }, 'json');
+                return false;
+            });
+
+
+        });
+    </script>
+}
+
