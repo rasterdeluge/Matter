@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatterCentral", "ASPNET_Core_1_0\MatterCentral.csproj", "{505E88D1-FA1E-4DDE-92F3-49BEA281E24F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AAD30089-3F83-41BB-A905-B8C0E09C2D40}"
+	ProjectSection(SolutionItems) = preProject
+		ASPNET_Core_1_0\ChangeLog.txt = ASPNET_Core_1_0\ChangeLog.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Justin.Mathis\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Justin.Mathis\\.nuget\\packages",
+      "C:\\Users\\RasterDeluge\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\RasterDeluge\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }

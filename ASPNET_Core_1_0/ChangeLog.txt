@@ -1,0 +1,82 @@
+﻿++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++CHANGELOG+++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# Changelog : (Added, Changed, Deprecated, Removed, Fixed, Security)
+All notable changes to this project will be documented in this file.
+
+##### Unreleased #####
+-dropdown for certain saved selections
+-collections and IEnumerables
+-add sort for indexes
+
+
+## [0.0.0] - 2017-09-07
+### Added
+- (07:30PM) Matthew found out how to use git
+
+**********BEGIN TEST EXAMPLE******************************************
+## [0.0.1] - 2017-09-03
+### Added
+- (02:00AM) CRUD for Commodity, Authorization, and Location
+- (01:31AM) Practice code to Home/Index
+- (10:00AM) PartialView to Home/Index
+- (10:30AM) Additinal Nav to Home/Index
+### Changed
+- (12:19AM) Homepage title renamed
+### Idea
+- (02:27AM) Found out how to do partial views. Wondering if I can 
+            load a different partial view depending on what time
+			it is, or some other conditional logic.
+			ANSWER: You can't. Must use jquery/ajax
+- (11:30AM) Found out how to do a vertical Navbar. Code is in
+            the _Layout page.
+			<ul class="nav nav-pills nav-stacked btn-group-vertical">
+			/with <li> elements
+**********END TEST EXAMPLE********************************************          
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++PROGRAM DESIGN DOCUMENT+++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Justin
+-Design basic domain model to represent auth, commodity
+ locations.
+-wiring to EF core 2.0
+-Unit Testing
+-Create Repository Pattern/ CQRS
+
+Level 1: Organization, Buyer, Location=>Destination, Supplier, Transportation
+         -Buyer: "Richard Schwab"
+               -BuyerAlias: "Richard Schwab"
+               -CPMItemStatus: "Active"
+               -ID: 48
+               -OrganizationalUnit: M.A. Rigoni, Inc (Name as ID or Link to Organization)
+         -Organization: "M.A. Rigoni, Inc."
+               -OrganizationalUnit: M.A. Rigoni, Inc (Name as ID or Link to Organization)
+               -CPMItemStatus: "Active"
+               -ID: 35
+         -Location: class
+               -Add below items to class?
+               -Location Type: "Land"
+               -FirstShiftStartTime: Military time: 0030=12:30am
+               -LocationID: "ALAPAHA LH"
+               -Facility Type: "External Owned"
+               -Scale Location: Bool
+               -Location Account Code: ""
+         -Destination: LocationID <-- !!!??? Recloc(receiving location) is a variable in Authorization Table
+         -Supplier: AccountTypes
+               -AccountTypes
+               -Title: "Supplier"
+               -ShowOnAuthorization: Yes
+               -CPMDescription: "Vendor for Purchasing commodities"
+               -CPMItemStatus: Active
+               -ID: 5
+         -Transportation:"Truck"
+               -Title: "Truck"
+               -Code: 'A'
+               -TransAccountCode: 254
+               -CPMItemStatus: Active
+Level 2: Commodities(Name,Group,Description)
+Level 3: Authorization(Number,Commodities,Account,Transportation)
+Level 4: Ticket(AuthNumber, Commodity, Destination, Transportation)
